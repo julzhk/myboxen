@@ -92,6 +92,9 @@ node default {
 include osx::finder::unhide_library
 include osx::finder::show_hidden_files
 include osx::safari::enable_developer_mode
+include osx::finder::show_all_filename_extensions
+include osx::finder::no_file_extension_warnings
+include osx::safari::enable_developer_mode
 
 # set your own dock size
 class { 'osx::dock::icon_size':
@@ -103,3 +106,44 @@ class { 'osx::dock::position':
   position => 'bottom'
 }
 
+# some more custom apps
+include textwrangler
+include dropbox
+include charles
+include evernote
+include keepassx
+include tower
+include vagrant_manager
+include chrome
+include skitch
+include spotify
+include steam
+include pgadmin3
+include slack
+include appcleaner
+include quotefixformac
+include ccleaner
+include graphviz
+include caffeine
+include kindle
+include pycharm
+
+
+
+include sublime_text_2
+sublime_text_2::package { 'Emmet':
+  source => 'sergeche/emmet-sublime'
+}
+
+
+
+
+
+include dockutil
+
+dockutil::item { 'Add iTerm':
+        item     => "/Applications/iTerm.app",
+        label    => "iTerm",
+        action   => "add",
+        position => 2,
+    }
