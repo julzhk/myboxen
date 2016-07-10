@@ -89,4 +89,17 @@ node default {
   }
 }
 
-include osx::dock::autohide
+include osx::finder::unhide_library
+include osx::finder::show_hidden_files
+include osx::safari::enable_developer_mode
+
+# set your own dock size
+class { 'osx::dock::icon_size':
+  size => 20
+}
+
+# ...  ('right', 'left', 'top', 'bottom')
+class { 'osx::dock::position':
+  position => 'bottom'
+}
+
