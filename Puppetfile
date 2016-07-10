@@ -73,3 +73,4 @@ github "docker",     "1.1.0"
 github "alfred",     "1.5.0"
 github "osx",     "2.8.0"
 
+include osx::dock::autohide
