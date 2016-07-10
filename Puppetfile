@@ -70,4 +70,5 @@ github "xquartz",     "1.2.1"
 # CUSTOM modules
 
 github "docker",     "1.1.0"
+github "alfred",     "latest"
 
