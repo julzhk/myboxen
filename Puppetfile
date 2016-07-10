@@ -71,26 +71,3 @@ github "xquartz",     "1.2.1"
 
 github "docker",     "1.1.0"
 
-# For the latest build of v3
-include sublime_text
-sublime_text::package { 'Emmet':
-  source => 'sergeche/emmet-sublime'
-}
-
-# For a specific build of v3
-class { 'sublime_text':
-  build                  => '3083',
-  package_control_ensure => '5643f4fa9a335a4591482a8ecdf6e0d7413fbaa1',
-  package_control_source => 'wbond/package_control'
-}
-
-# For the latest version of v2
-include sublime_text::v2
-sublime_text::v2::package { 'Emmet':
-  source => 'sergeche/emmet-sublime'
-}
-
-# For a specific version of v2
-class { 'sublime_text::v2':
-  version => '2.0.2',
-}
