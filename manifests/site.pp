@@ -107,7 +107,7 @@ class { 'osx::dock::position':
 }
 
 # some more custom apps
-include textwrangler
+# include textwrangler
 include dropbox
 include charles
 include evernote
