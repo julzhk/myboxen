@@ -128,6 +128,7 @@ include caffeine
 include kindle
 include pycharm
 
+include iterm2::stable
 
 
 include sublime_text_2
